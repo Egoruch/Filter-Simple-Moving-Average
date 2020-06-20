@@ -1,6 +1,6 @@
 #include "filter_sma.h"
 
-uint16_t Filter_Buffer[Filter_SMA_Order] = {0,};
+uint16_t Filter_Buffer[FILTER_SMA_ORDER] = {0,};
 
 /**
   * @brief Simple Moving Average (SMA) filter.
@@ -11,22 +11,22 @@ uint16_t Filter_Buffer[Filter_SMA_Order] = {0,};
 	uint16_t Filter_SMA(uint16_t For_Filtered)
 {
 	/* Load new value */
-	Filter_Buffer[Filter_SMA_Order - 1] = For_Filtered;
+	Filter_Buffer[FILTER_SMA_ORDER - 1] = For_Filtered;
 	
 	/* For output value */
 	uint32_t Output = 0;
 	
 	/* Sum */
-	for(uint8_t i = 0; i < Filter_SMA_Order; i++)
+	for(uint8_t i = 0; i < FILTER_SMA_ORDER; i++)
 	{
 		Output += Filter_Buffer[i];
 	}
 	
 	/* Divide */
-	Output /= Filter_SMA_Order;
+	Output /= FILTER_SMA_ORDER;
 	
 	/* Left Shift */
-	for(uint8_t i = 0; i < Filter_SMA_Order; i++)
+	for(uint8_t i = 0; i < FILTER_SMA_ORDER; i++)
 				Filter_Buffer[i] = Filter_Buffer[i+1];
 
 	/* Return filtered value */
