@@ -5,3 +5,4 @@ Simple SMA filter for embedded purposes.
 ## Charts (filtering examples)
 ![alt text](https://github.com/Egoruch/Filter-Simple-Moving-Average/blob/master/img/moving_average_filtered_stm32.svg)
 ![alt text](https://cxemka.com/upload/art/sma/temperature_air_filtered.svg)
+![alt text](https://cxemka.com/upload/art/ntc_stm32/ntc_filtering_sma.png)
