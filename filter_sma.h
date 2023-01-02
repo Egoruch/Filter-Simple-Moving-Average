@@ -5,7 +5,7 @@
 
 /* Choose filter order */
 
-#define FILTER_SMA_ORDER 64
+#define FILTER_SMA_ORDER 16
 
 /* Enumerations BEGIN */
 
