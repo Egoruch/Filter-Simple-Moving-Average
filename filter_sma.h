@@ -3,9 +3,11 @@
 
 #include "main.h"
 
-/* Choose filter order */
+/* Choose filter order in main.c file, if no default value is 16 */
 
+#ifndef FILTER_SMA_ORDER
 #define FILTER_SMA_ORDER 16
+#endif
 
 /* Enumerations BEGIN */
 
